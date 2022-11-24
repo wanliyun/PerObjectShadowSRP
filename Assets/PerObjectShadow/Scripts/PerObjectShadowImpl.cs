@@ -79,6 +79,7 @@ public partial class PerObjectShadowImpl {
 
         public void Invalidate() {
             gameObject = null;
+            renderers = null;
         }
     }
 

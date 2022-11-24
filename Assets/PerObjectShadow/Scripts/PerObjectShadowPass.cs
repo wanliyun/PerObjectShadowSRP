@@ -97,7 +97,6 @@ public class PerObjectShadowPass : ScriptableRenderPass {
                 }
                 cmd.SetViewport(new Rect(sliceData.sliceDataPerFrame.sliceOffset.x, sliceData.sliceDataPerFrame.sliceOffset.y, sliceData.sliceDataPerFrame.sliceResolution.x, sliceData.sliceDataPerFrame.sliceResolution.y));
                 cmd.SetViewProjectionMatrices(sliceData.sliceDataPerFrame.shadowViewMatrix, sliceData.sliceDataPerFrame.shadowProjMatrix);
-                Vector3 lightDir = settings.LightDirection;
                 context.ExecuteCommandBuffer(cmd); // cmd barrier
                 cmd.Clear();
                 foreach (Renderer r in sliceData.renderers) {
